@@ -410,7 +410,42 @@ programs = {
        {
            "url":"https://github.com/owensd/json-swift",
            "commands":[os.path.join(PARSERS_DIR, "test_json_swift_20170522/bin/json_swift")]
-       }
+       },
+   "SBCL cl-json":
+         {
+             "url": "https://common-lisp.net/project/cl-json/",
+             "commands": ["/usr/bin/env", "sbcl", "--script", os.path.join(PARSERS_DIR, "test_sbcl_cl_json.lisp")]
+         },
+   "SBCL YASON":
+         {
+             "url": "http://hanshuebner.github.io/yason/",
+             "commands": ["/usr/bin/env", "sbcl", "--script", os.path.join(PARSERS_DIR, "test_sbcl_yason.lisp")]
+         },
+   "SBCL Jonathan":
+         {
+             "url": "http://rudolph-miller.github.io/jonathan/overview.html",
+             "commands": ["/usr/bin/env", "sbcl", "--script", os.path.join(PARSERS_DIR, "test_sbcl_jonathan.lisp")]
+         },
+   "SBCL json-streams":
+         {
+             "url": "https://github.com/copyleft/json-streams",
+             "commands": ["/usr/bin/env", "sbcl", "--script", os.path.join(PARSERS_DIR, "test_sbcl_json_streams.lisp")]
+         },
+   "SBCL jsown":
+         {
+             "url": "https://github.com/madnificent/jsown",
+             "commands": ["/usr/bin/env", "sbcl", "--script", os.path.join(PARSERS_DIR, "test_sbcl_jsown.lisp")]
+         },
+   "SBCL monkeylib-json":
+         {
+             "url": "https://github.com/gigamonkey/monkeylib-json",
+             "commands": ["/usr/bin/env", "sbcl", "--script", os.path.join(PARSERS_DIR, "test_sbcl_monkeylib_json.lisp")]
+         },
+   "SBCL ST-JSON":
+         {
+             "url": "http://marijnhaverbeke.nl/st-json/",
+             "commands": ["/usr/bin/env", "sbcl", "--script", os.path.join(PARSERS_DIR, "test_sbcl_st_json.lisp")]
+         }
 }
 
 def run_tests(restrict_to_path=None, restrict_to_program=None):
